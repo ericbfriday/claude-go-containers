@@ -1,0 +1,23 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+*.md
+
+# Build artifacts
+app
+*.exe
+*.test
+*.out
+
+# Coverage
+coverage.*
+*.coverprofile
+
+# IDE
+.vscode
+.idea
+
+# Dependencies (will be downloaded in container)
+vendor/
