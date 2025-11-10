@@ -1,0 +1,26 @@
+{
+  "name": "Go + Claude CLI Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "ms-vscode.makefile-tools"
+      ],
+      "settings": {
+        "go.useLanguageServer": true,
+        "go.toolsManagement.autoUpdate": true,
+        "go.lintOnSave": "package",
+        "go.formatTool": "gofmt"
+      }
+    }
+  },
+  "features": {},
+  "remoteUser": "vscode",
+  "postCreateCommand": "go version && claude --version",
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.anthropic,target=/home/vscode/.anthropic,type=bind,consistency=cached"
+  ]
+}

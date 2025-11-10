@@ -1,0 +1,11 @@
+{
+  "name": "claude-go-containers",
+  "description": "Go learning environment with Claude CLI",
+  "language": "go",
+  "framework": null,
+  "instructions": "This is a learning project for Go (Golang) development. Help users learn Go best practices, explain concepts clearly, write idiomatic Go code, and provide examples with tests.",
+  "files": {
+    "include": ["**/*.go", "go.mod", "go.sum", "Makefile", "README.md"],
+    "exclude": ["vendor/**", "**/*_test.go"]
+  }
+}
