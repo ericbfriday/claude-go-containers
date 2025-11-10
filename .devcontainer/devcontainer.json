@@ -21,6 +21,6 @@
   "remoteUser": "vscode",
   "postCreateCommand": "go version && claude --version",
   "mounts": [
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.anthropic,target=/home/vscode/.anthropic,type=bind,consistency=cached"
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached"
   ]
 }
