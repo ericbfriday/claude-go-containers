@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Theme configuration
+  "theme": "opencode",
+  "model": "zai-coding-plan/glm-4.6",
+  "autoupdate": true,
+  "tools": {
+    "write": true,
+    "bash": true
+  }
+}
+

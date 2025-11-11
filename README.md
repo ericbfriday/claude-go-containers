@@ -1,13 +1,15 @@
 # claude-go-containers
 
-A development environment for learning Go (Golang) with Claude CLI integrated in a Dev Container.
+A comprehensive development environment for learning Go (Golang) with AI-powered coding assistants integrated in a Dev Container.
 
 ## Overview
 
 This repository provides a complete setup for:
 - **Latest Go (Golang) environment** - Using the official latest Go Docker image
 - **Claude CLI** - Anthropic's Claude Code CLI for AI-assisted development
+- **OpenCode AI** - SST's AI coding agent built for the terminal
 - **VS Code Dev Container** - Containerized development environment with all tools pre-installed
+- **Optional Crush AI** - Charmbracelet's terminal AI assistant (can be enabled via feature flag)
 
 ## Prerequisites
 
@@ -56,6 +58,9 @@ go version
 # Check Claude CLI
 claude --version
 
+# Check OpenCode AI
+opencode --version
+
 # Run the sample program
 go run main.go
 
@@ -78,9 +83,11 @@ go test ./...
 └── README.md                 # This file
 ```
 
-## Using Claude CLI in the Container
+## AI-Powered Development Tools
 
-Once inside the dev container, you can use Claude CLI for various tasks:
+### Claude CLI
+
+Use Claude CLI for quick AI assistance:
 
 ```bash
 # Ask Claude a question
@@ -92,6 +99,43 @@ claude "Explain this function" < examples/hello.go
 # Generate code
 claude "Write a function to reverse a string in Go"
 ```
+
+### OpenCode AI
+
+Use OpenCode for AI-powered coding assistance:
+
+```bash
+# Start interactive coding session
+opencode
+
+# Work with specific file
+opencode examples/hello.go
+
+# Get help
+opencode --help
+```
+
+**OpenCode Features:**
+- Terminal-native AI coding agent
+- LSP integration (works with Go language server)
+- Context-aware code understanding
+- Multi-model AI support
+- Privacy-focused configuration
+- Built for developer workflows
+
+### Optional: Crush AI Agent
+
+Crush can be enabled as an optional feature by uncommenting it in `.devcontainer/devcontainer.json`:
+
+```json
+"features": {
+  "./features/crush": {
+    "version": "latest"
+  }
+}
+```
+
+Then rebuild the container to use Crush alongside OpenCode and Claude CLI.
 
 ## Learning Go
 
@@ -150,19 +194,42 @@ go build -o app
 
 The dev container includes:
 
+### Core Development Tools
 - **Go** (latest version)
-- **Claude CLI** (latest version)
 - **gopls** - Go language server
 - **delve** - Go debugger
 - **staticcheck** - Go linter
 - **goimports** - Import formatter
 
+### AI Coding Assistants
+- **Claude CLI** (latest version) - Command-line AI assistance
+- **OpenCode AI** (latest version) - SST's terminal AI coding agent
+- **Crush** (optional feature) - Charmbracelet's terminal AI assistant
+- **Node.js & npm** - For JavaScript/TypeScript AI tooling
+
 ## Tips
 
-1. **Use Claude for Learning**: Ask Claude to explain Go concepts, review your code, or help debug issues
+1. **Use AI Tools for Learning**:
+   - Ask Claude quick questions via CLI
+   - Use OpenCode for AI-powered coding workflows
+   - Both tools can explain Go concepts, review code, and help debug issues
+
 2. **Explore Examples**: Modify the code in the `examples/` directory to experiment
+
 3. **Write Tests**: Practice test-driven development with Go's built-in testing framework
+
 4. **Read Documentation**: Use `go doc` to explore Go's standard library
+
+5. **AI-Assisted Development**:
+   - Start `opencode` for AI-powered coding workflows
+   - Use `claude` for quick one-off questions
+   - Leverage LSP integration in OpenCode for contextual code assistance
+
+## Additional Resources
+
+- **[OpenCode Setup Guide](docs/guides/OPENCODE_SETUP.md)** - Detailed guide for using OpenCode AI
+- **[OpenCode Documentation](https://opencode.ai/docs)** - Official OpenCode documentation
+- **[Go Documentation](https://golang.org/doc/)** - Official Go language documentation
 
 ## Contributing
 

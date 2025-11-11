@@ -1,0 +1,17 @@
+{
+  "id": "crush",
+  "version": "1.0.0",
+  "name": "Crush AI Coding Agent",
+  "description": "Installs Crush, a terminal-based AI assistant for developers (Charmbracelet)",
+  "documentationURL": "https://github.com/charmbracelet/crush",
+  "options": {
+    "version": {
+      "type": "string",
+      "default": "latest",
+      "description": "Version of Crush to install (e.g., '0.16.1' or 'latest')"
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
+}

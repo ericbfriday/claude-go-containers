@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Welcome to Go development with Claude! This guide will help you get started quickly.
+Welcome to AI-powered Go development! This guide will help you get started quickly with Go programming using Claude CLI and OpenCode AI.
 
 ## First Steps
 
@@ -14,6 +14,9 @@ go version
 
 # Check Claude CLI
 claude --version
+
+# Check OpenCode AI
+opencode --version
 ```
 
 ### 2. Run Your First Go Program
@@ -25,8 +28,13 @@ go run main.go
 
 You should see:
 ```
-Hello from Go + Claude CLI!
-This is a learning environment for Go development with Claude.
+Hello from Go + AI Development Environment!
+This workspace includes:
+  • Go development tools (latest)
+  • Claude CLI for quick AI assistance
+  • OpenCode AI for terminal-based coding workflows
+
+Try: 'claude --help' or 'opencode --help' to get started!
 ```
 
 ### 3. Run Tests
@@ -173,9 +181,11 @@ make build
 make run
 ```
 
-## Using Claude CLI for Learning
+## AI-Powered Learning Tools
 
-### Ask Questions
+### Claude CLI - Quick Questions
+
+Use Claude CLI for fast, one-off questions:
 
 ```bash
 # Learn about a concept
@@ -186,40 +196,47 @@ claude "Show me examples of error handling in Go"
 
 # Understand syntax
 claude "What's the difference between := and var in Go?"
-```
 
-### Get Code Help
-
-```bash
 # Review your code
 claude "Review this code for best practices" < examples/hello.go
 
 # Debug issues
 claude "Why might this code cause a panic?" < main.go
-
-# Generate code
-claude "Write a function to read a JSON file in Go"
 ```
 
-### Learn Best Practices
+### OpenCode AI - Interactive Coding
+
+Use OpenCode for AI-powered coding workflows:
 
 ```bash
-# Ask about patterns
-claude "What are common Go design patterns?"
+# Start interactive coding session
+opencode
 
-# Testing advice
-claude "How should I structure tests in Go?"
+# Work with specific file
+opencode examples/hello.go
 
-# Performance tips
-claude "What are Go performance best practices?"
+# Get help
+opencode --help
 ```
+
+**With OpenCode, you can:**
+- Get AI assistance in your coding workflow
+- Leverage LSP integration for Go code understanding
+- Work with context-aware AI suggestions
+- Analyze code structure and patterns
+- Debug issues with AI assistance
+
+### When to Use Which Tool
+
+- **Claude CLI**: Quick questions, code reviews, generating snippets
+- **OpenCode**: AI-powered coding workflows, interactive development, code analysis
 
 ## Next Steps
 
 1. **Explore the Examples**: Look at `examples/hello.go` and `examples/hello_test.go`
 2. **Modify the Code**: Change the functions and see what happens
 3. **Write Tests**: Practice test-driven development
-4. **Ask Claude**: Use Claude to learn new concepts as you go
+4. **Use AI Tools**: Use Claude CLI for quick questions, OpenCode for interactive workflows
 5. **Build Something**: Create your own package or small project
 
 ## Resources
@@ -231,7 +248,9 @@ claude "What are Go performance best practices?"
 
 ## Getting Help
 
-- Use `claude "your question"` for AI assistance
+- Use `claude "your question"` for quick AI assistance
+- Use `opencode` for AI-powered coding workflows
+- See [OPENCODE_SETUP.md](docs/guides/OPENCODE_SETUP.md) for detailed AI tools guide
 - Check `make help` for available commands
 - Read the main [README.md](README.md) for detailed information
 - See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines

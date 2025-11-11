@@ -43,9 +43,11 @@ When adding new examples:
 3. Document the example in comments
 4. Update README.md if the example demonstrates a new concept
 
-## Using Claude CLI
+## Using AI Development Tools
 
-You can use Claude CLI to help with development:
+### Claude CLI - Quick Assistance
+
+Use Claude CLI for fast development help:
 
 ```bash
 # Get help writing tests
@@ -57,6 +59,30 @@ claude "Review this code for best practices" < examples/your_file.go
 # Explain concepts
 claude "Explain how goroutines work in Go"
 ```
+
+### OpenCode AI - Coding Workflows
+
+Use OpenCode for AI-powered development workflows:
+
+```bash
+# Start interactive coding session
+opencode
+
+# Work with specific file
+opencode examples/your_file.go
+
+# Get help
+opencode --help
+```
+
+**Development Workflow with AI:**
+1. Use OpenCode for AI-powered coding workflows and architecture decisions
+2. Write code with LSP assistance and OpenCode suggestions
+3. Use Claude CLI for quick syntax or API questions
+4. Review code with both tools for best practices
+5. Test and debug with AI assistance
+
+See [OPENCODE_SETUP.md](docs/guides/OPENCODE_SETUP.md) for detailed usage instructions.
 
 ## Pull Requests
 

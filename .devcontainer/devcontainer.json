@@ -1,5 +1,5 @@
 {
-  "name": "Go + Claude CLI Dev Environment",
+  "name": "Go + Claude CLI + OpenCode AI Dev Environment",
   "build": {
     "dockerfile": "Dockerfile"
   },
@@ -17,9 +17,14 @@
       }
     }
   },
-  "features": {},
+  "features": {
+    // Uncomment to enable Crush AI (Charmbracelet) as an optional AI assistant
+    // "./features/crush": {
+    //   "version": "latest"
+    // }
+  },
   "remoteUser": "vscode",
-  "postCreateCommand": "go version && claude --version",
+  "postCreateCommand": "go version && claude --version && opencode --version",
   "mounts": [
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached"
   ]
