@@ -40,7 +40,7 @@ npm install -g @anthropic-ai/claude-code
 claude auth
 ```
 
-The dev container will mount your `~/.anthropic` directory to persist authentication.
+The dev container will mount your `~/.claude` directory to persist authentication.
 
 ### 3. Open in Dev Container
 
