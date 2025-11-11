@@ -6,6 +6,8 @@ A comprehensive development environment for learning Go (Golang) with AI-powered
 
 This repository provides a complete setup for:
 - **Latest Go (Golang) environment** - Using the official latest Go Docker image
+- **Comprehensive Learning Curriculum** - 42 progressive lessons from Go fundamentals to advanced TUI development
+- **AI Provider Competition System** - Multiple AI assistants create implementations for comparison
 - **Claude CLI** - Anthropic's Claude Code CLI for AI-assisted development
 - **OpenCode AI** - SST's AI coding agent built for the terminal
 - **VS Code Dev Container** - Containerized development environment with all tools pre-installed
@@ -75,11 +77,30 @@ go test ./...
 ├── .devcontainer/
 │   ├── devcontainer.json    # Dev container configuration
 │   └── Dockerfile            # Container image with Go + Claude CLI
+├── docs/
+│   └── guides/
+│       ├── go-learning-plan.md      # Comprehensive learning progression
+│       ├── go-in-2025-guide.md      # Modern Go ecosystem guide
+│       └── OPENCODE_SETUP.md        # AI tools setup
+├── lessons/                          # NEW: Learning curriculum
+│   ├── README.md                     # Curriculum overview
+│   ├── LESSON_MANIFEST.md            # All 42 lessons detailed
+│   ├── LESSON_TEMPLATE.md            # Template for new lessons
+│   ├── AI_PROVIDER_GUIDE.md          # Multi-AI competition guide
+│   ├── specifications/               # Lesson requirements
+│   ├── implementations/              # AI-generated solutions
+│   │   ├── claude/                   # Claude implementations
+│   │   ├── opencode/                 # OpenCode implementations
+│   │   ├── copilot/                  # GitHub Copilot implementations
+│   │   ├── cursor/                   # Cursor AI implementations
+│   │   └── reference/                # Human-reviewed exemplars
+│   └── assessments/                  # Grading rubrics
 ├── examples/
 │   ├── hello.go             # Sample Go package
 │   └── hello_test.go        # Sample tests
 ├── main.go                   # Entry point
 ├── go.mod                    # Go module definition
+├── CLAUDE.md                 # Claude Code guidance
 └── README.md                 # This file
 ```
 
@@ -137,46 +158,102 @@ Crush can be enabled as an optional feature by uncommenting it in `.devcontainer
 
 Then rebuild the container to use Crush alongside OpenCode and Claude CLI.
 
-## Learning Go
+## Learning Go with AI-Powered Curriculum
 
-This repository includes sample code to help you learn Go:
+This repository features a **comprehensive 42-lesson curriculum** designed to take you from Go novice to proficient TUI developer in 2-4 weeks of intensive study (or 8-12 weeks part-time).
 
-### Run the Main Program
+### Curriculum Overview
+
+**Phase 1: Go Fundamentals** (Lessons 1-8)
+- Master Go syntax, types, control flow, functions
+- Learn structs, interfaces, error handling, packages
+- **Milestone**: Quiz Game project
+
+**Phase 2: CLI Development** (Lessons 9-14)
+- Build command-line tools with standard library and Cobra
+- Implement file I/O, JSON persistence, API integration
+- **Milestone**: Full-featured Task Tracker CLI
+
+**Phase 3: Styling with Lip Gloss** (Lessons 15-18)
+- Add beautiful terminal styling before TUIs
+- Colors, borders, layouts, themes
+- **Milestone**: Styled CLI applications
+
+**Phase 4: Concurrency** (Lessons 19-24)
+- Master goroutines, channels, sync primitives
+- Worker pools, pipelines, context
+- **Milestone**: Concurrent Web Crawler
+
+**Phase 5: Bubble Tea Architecture** (Lessons 25-30)
+- Learn The Elm Architecture (Model-Update-View)
+- Commands, messages, async I/O
+- **Milestone**: Shopping List TUI
+
+**Phase 6: Bubbles Components** (Lessons 31-36)
+- Master pre-built components (textinput, list, table, viewport)
+- Component composition patterns
+- **Milestone**: Interactive Todo TUI
+
+**Phase 7: Advanced TUI** (Lessons 37-42)
+- Huh forms, state management, testing
+- **Capstones**: Kanban Board, Git TUI Dashboard
+
+### Getting Started with Lessons
 
 ```bash
+# 1. Navigate to lessons directory
+cd lessons
+
+# 2. Read the curriculum overview
+cat README.md
+
+# 3. Review lesson manifest (all 42 lessons)
+cat LESSON_MANIFEST.md
+
+# 4. Start with Lesson 01 specification
+cat specifications/lesson-01-hello-world.md
+
+# 5. Attempt implementation yourself OR use AI
+# AI Implementation Options:
+
+# Option A: Claude CLI
+claude "Implement this lesson specification" < specifications/lesson-01-hello-world.md
+
+# Option B: OpenCode AI
+opencode specifications/lesson-01-hello-world.md
+# Then: "Implement following Go best practices"
+
+# Option C: Compare multiple AI implementations
+# See AI_PROVIDER_GUIDE.md for detailed workflow
+```
+
+### AI Provider Competition System
+
+Each lesson can be implemented by multiple AI providers:
+- **Claude Code** - Comprehensive, well-documented
+- **OpenCode AI** - Terminal-native, LSP-integrated
+- **GitHub Copilot** - Fast inline suggestions
+- **Cursor AI** - Codebase-aware refactoring
+- **Reference** - Human-reviewed exemplar solutions
+
+Compare implementations to learn different approaches, trade-offs, and best practices.
+
+### Quick Start Commands
+
+```bash
+# Run the Main Program
 go run main.go
-```
 
-### Run Tests
+# Run Tests
+go test ./...              # All tests
+go test -v ./...           # Verbose
+go test -cover ./...       # With coverage
 
-```bash
-# Run all tests
-go test ./...
-
-# Run tests with verbose output
-go test -v ./...
-
-# Run tests with coverage
-go test -cover ./...
-```
-
-### Format Code
-
-```bash
-# Format all Go files
+# Format Code
 go fmt ./...
 
-# Or use gofmt directly
-gofmt -w .
-```
-
-### Build the Project
-
-```bash
-# Build the executable
+# Build the Project
 go build -o app
-
-# Run the built executable
 ./app
 ```
 
@@ -227,9 +304,22 @@ The dev container includes:
 
 ## Additional Resources
 
-- **[OpenCode Setup Guide](docs/guides/OPENCODE_SETUP.md)** - Detailed guide for using OpenCode AI
+### Learning Guides
+- **[Go Learning Plan](docs/guides/go-learning-plan.md)** - Comprehensive 2-4 week learning progression
+- **[Go in 2025 Guide](docs/guides/go-in-2025-guide.md)** - Modern ecosystem, best practices, and pitfalls
+- **[OpenCode Setup Guide](docs/guides/OPENCODE_SETUP.md)** - AI tools configuration
+
+### Curriculum Documentation
+- **[Lessons README](lessons/README.md)** - Curriculum overview and structure
+- **[Lesson Manifest](lessons/LESSON_MANIFEST.md)** - All 42 lessons detailed
+- **[AI Provider Guide](lessons/AI_PROVIDER_GUIDE.md)** - Multi-AI competition system
+
+### External Resources
 - **[OpenCode Documentation](https://opencode.ai/docs)** - Official OpenCode documentation
 - **[Go Documentation](https://golang.org/doc/)** - Official Go language documentation
+- **[Tour of Go](https://go.dev/tour/)** - Interactive introduction
+- **[Go by Example](https://gobyexample.com/)** - Hands-on examples
+- **[Charm.sh](https://charm.sh/)** - TUI framework ecosystem
 
 ## Contributing
 

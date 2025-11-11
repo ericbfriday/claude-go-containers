@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     jq \
     starship \
+    unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Create a non-root user
@@ -49,8 +50,8 @@ ENV PATH=$GOPATH/bin:$PATH
 # Switch to non-root user
 USER $USERNAME
 
-RUN echo 'eval "$(starship init bash)"' >> ~/.bashrc
-RUN starship preset pastel-powerline -o ~/.config/starship.toml
+RUN echo 'eval "$(starship init bash)"' >> /home/$USERNAME/.bashrc
+# RUN starship preset pastel-powerline -o ~/.config/starship.toml
 
 # Set working directory
 WORKDIR /workspace

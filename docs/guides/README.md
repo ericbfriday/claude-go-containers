@@ -46,23 +46,29 @@ Step-by-step guides and comprehensive learning resources for Go development with
 
 ## 🔗 Related Documentation
 
+### Learning Curriculum (NEW!)
+- [../../lessons/README.md](../../lessons/README.md) - 42-lesson curriculum overview
+- [../../lessons/LESSON_MANIFEST.md](../../lessons/LESSON_MANIFEST.md) - All lessons detailed
+- [../../lessons/AI_PROVIDER_GUIDE.md](../../lessons/AI_PROVIDER_GUIDE.md) - Multi-AI competition system
+- [../../lessons/specifications/](../../lessons/specifications/) - Individual lesson specs
+
 ### Core Documentation
-- [../INDEX.md](../INDEX.md) - Master documentation index
-- [../DEVELOPMENT_GUIDE.md](../DEVELOPMENT_GUIDE.md) - Daily development workflows
-- [../ARCHITECTURE.md](../ARCHITECTURE.md) - System architecture
+- [../INDEX.md](../INDEX.md) - Master documentation index (if exists)
+- [../DEVELOPMENT_GUIDE.md](../DEVELOPMENT_GUIDE.md) - Daily development workflows (if exists)
+- [../ARCHITECTURE.md](../ARCHITECTURE.md) - System architecture (if exists)
 
 ### Getting Started
 - [../../README.md](../../README.md) - Project overview
-- [../../QUICKSTART.md](../../QUICKSTART.md) - Quick start guide
 - [../../CLAUDE.md](../../CLAUDE.md) - Claude Code guidance
 
 ## 📖 Reading Recommendations
 
 ### For Beginners
-1. Start with [../../QUICKSTART.md](../../QUICKSTART.md)
-2. Read [OPENCODE_SETUP.md](OPENCODE_SETUP.md) for AI tools
-3. Follow [go-learning-plan.md](go-learning-plan.md) for structured learning
-4. Reference [go-in-2025-guide.md](go-in-2025-guide.md) as needed
+1. Start with [../../README.md](../../README.md) - Project overview
+2. Read [OPENCODE_SETUP.md](OPENCODE_SETUP.md) for AI tools setup
+3. Begin **[Lessons Curriculum](../../lessons/README.md)** - Start with Lesson 01
+4. Use [go-learning-plan.md](go-learning-plan.md) as supplementary reading
+5. Reference [go-in-2025-guide.md](go-in-2025-guide.md) for ecosystem details
 
 ### For Experienced Go Developers
 1. Review [go-in-2025-guide.md](go-in-2025-guide.md) for modern patterns

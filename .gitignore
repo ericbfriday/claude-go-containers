@@ -33,3 +33,5 @@ go.work.sum
 
 # Build artifacts
 app
+
+.opencode/auth.json
